@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>5c600139-953c-4ac8-84a2-59e814c66e2b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="publish001\**" />
+    <Compile Remove="publish002\**" />
+    <Compile Remove="publish003\**" />
+    <Content Remove="publish001\**" />
+    <Content Remove="publish002\**" />
+    <Content Remove="publish003\**" />
+    <EmbeddedResource Remove="publish001\**" />
+    <EmbeddedResource Remove="publish002\**" />
+    <EmbeddedResource Remove="publish003\**" />
+    <None Remove="publish001\**" />
+    <None Remove="publish002\**" />
+    <None Remove="publish003\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.0" />
+    <PackageReference Include="SwashBuckle.AspNetCore" Version="5.0.0-rc4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="log\" />
+  </ItemGroup>
+
+
+</Project>
